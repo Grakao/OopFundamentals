@@ -1,2 +1,6 @@
-# oop-concepts
-Object-Oriented Programming Concepts Demonstrated in Code
+# Object-Oriented Programming Fundamentals Demonstrated in Code
+
+## Abstraction
+## Encapsulation
+## Inheritance
+## Polimorphism
