@@ -8,10 +8,13 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("[1] - Convert From Fahrenheit");
-            Console.WriteLine("[2] - Convert From Kelvin");
-            Console.WriteLine("-----------------------------");
-            Console.WriteLine("Type the desired conversion:");
+            Console.WriteLine("==================================");
+            Console.WriteLine("      Temperature Converter       ");
+            Console.WriteLine("==================================");
+            Console.WriteLine("  [1] Convert Fahrenheit to Celsius");
+            Console.WriteLine("  [2] Convert Kelvin to Celsius");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Choose a conversion option:");
 
             if (int.TryParse(Console.ReadLine(), out input) && input is 1 or 2)
             {
