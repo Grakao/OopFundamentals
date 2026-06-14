@@ -1,4 +1,6 @@
-﻿namespace Encapsulation;
+﻿using System.Globalization;
+
+namespace Encapsulation;
 
 class Program
 {
@@ -29,11 +31,12 @@ class Program
         if (input == 1)
         {
             Console.WriteLine("Type in the Fahrenheit value to convert:");
-            int fahrenheit = Convert.ToInt32(Console.ReadLine());
+            double fahrenheit = Convert.ToDouble(Console.ReadLine());
 
             temperature.ConvertFromFahrenheit(fahrenheit); // Conversion details are encapsulated
 
-            Console.WriteLine($"The value in Celsius is {temperature.Celsius:F1} ºC");
+            Console.WriteLine(
+                $"The value in Celsius is {temperature.Celsius.ToString("F1", CultureInfo.InvariantCulture)} ºC");
         }
 
         if (input == 2)
@@ -41,11 +44,12 @@ class Program
             try
             {
                 Console.WriteLine("Type in the Kelvin value to convert:");
-                int kelvin = Convert.ToInt32(Console.ReadLine());
+                double kelvin = Convert.ToDouble(Console.ReadLine());
 
                 temperature.ConvertFromKelvin(kelvin); // Conversion details are encapsulated
 
-                Console.WriteLine($"The value in Celsius is {temperature.Celsius:F1} ºC");
+                Console.WriteLine(
+                    $"The value in Celsius is {temperature.Celsius.ToString("F1", CultureInfo.InvariantCulture)} ºC");
             }
             catch (Exception e)
             {
